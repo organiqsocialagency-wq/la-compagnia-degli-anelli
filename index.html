@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>La Compagnia degli Anelli APS · Scuola di doppiaggio e arti recitative · Roma</title>
+<meta name="description" content="Associazione di Promozione Sociale a Roma: corsi e laboratori di doppiaggio, recitazione, teatro e dizione. Al termine del corso, provino in sala con direttori e maestri di doppiaggio veri. Associati come socio." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300..800;1,300..800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="cursor" id="cursor" aria-hidden="true"></div>
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="#hero" class="nav__logo" data-cursor>
+      <img src="logo.png" alt="La Compagnia degli Anelli" class="nav__logo-mark" />
+      <span class="nav__logo-text"><b>La Compagnia degli Anelli</b><small>APS · Roma</small></span>
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#chisiamo" class="nav__link" data-nav>Chi siamo</a>
+      <a href="#metodo" class="nav__link" data-nav>Perché noi</a>
+      <a href="#corsi" class="nav__link" data-nav>Corsi</a>
+      <a href="#trasparenza" class="nav__link" data-nav>Trasparenza</a>
+      <a href="#reviews" class="nav__link" data-nav>Recensioni</a>
+      <a href="#faq" class="nav__link" data-nav>FAQ</a>
+    </nav>
+    <a href="https://api.whatsapp.com/send?phone=393496034131" class="btn btn--light nav__cta" target="_blank" rel="noopener" data-cursor>Associati ora <span class="btn__chev">›</span></a>
+    <button class="nav__burger" id="burger" aria-label="Menu"><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero__glow" aria-hidden="true"></div>
+  <div class="hero__beams" aria-hidden="true"></div>
+  <div class="container hero__inner">
+    <div class="badge reveal" data-reveal><span class="badge__dot"></span> APS · Associazione di Promozione Sociale · Roma</div>
+    <h1 class="hero__title">
+      <span class="hero__title-top" data-reveal><span class="accent">La scuola di doppiaggio</span> e arti recitative</span>
+      <span class="hero__title-serif" data-reveal>Dai voce alle tue <em class="serif-it">storie</em></span>
+    </h1>
+    <p class="hero__sub reveal" data-reveal>
+      Corsi e laboratori di <strong>doppiaggio, recitazione, teatro e dizione</strong> a Roma.<span class="hide-mobile"> Non vendiamo un servizio: costruiamo una <b class="hl-lime">comunità</b> di persone che condividono la stessa passione e vogliono coltivarla insieme.</span>
+    </p>
+    <div class="hero__actions reveal" data-reveal>
+      <a href="https://api.whatsapp.com/send?phone=393496034131" class="btn btn--wa" target="_blank" rel="noopener" data-cursor>
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.9 4.44-9.9 9.9 0 1.75.46 3.45 1.32 4.95L2 22l5.3-1.39c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.9-4.44 9.9-9.9S17.5 2 12.04 2zm5.8 14.06c-.24.68-1.4 1.3-1.94 1.35-.5.05-1.13.07-1.82-.11-.42-.13-.96-.31-1.65-.6-2.9-1.25-4.8-4.17-4.94-4.36-.14-.19-1.18-1.57-1.18-3s.75-2.13 1.02-2.42c.27-.29.58-.36.77-.36l.55.01c.18.01.42-.07.65.5.24.58.82 2 .89 2.14.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.17-.29.37-.42.5-.14.14-.28.29-.12.57.16.29.72 1.19 1.55 1.92 1.06.95 1.96 1.24 2.24 1.38.28.14.44.12.6-.07.16-.19.69-.81.87-1.09.18-.28.36-.23.6-.14.24.09 1.55.73 1.82.86.27.14.45.21.51.32.07.12.07.66-.17 1.34z"/></svg>
+        Associati ora su WhatsApp <span class="btn__chev">›</span>
+      </a>
+      <a href="https://api.whatsapp.com/send?phone=393496034131" class="btn btn--ghost" target="_blank" rel="noopener" data-cursor>Richiedi informazioni <span class="btn__chev">›</span></a>
+    </div>
+    <div class="hero__video hero__video--vsl">
+      <div class="ph ph--video">
+        <video class="hero__vid" controls playsinline preload="metadata" poster="vsl-poster.jpg">
+          <source src="vsl.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CHI SIAMO -->
+<section class="about" id="chisiamo">
+  <div class="container about__grid">
+    <div class="about__text">
+      <div class="badge reveal" data-reveal><span class="badge__dot"></span> Chi siamo</div>
+      <h2 class="section-title section-title--left" data-split>Non vendiamo un servizio.<br /><span class="accent accent--italic">Costruiamo una comunità.</span></h2>
+      <p class="section-sub section-sub--left reveal" data-reveal>
+        <b class="hl-blue">La Compagnia degli Anelli APS</b> è un'associazione di promozione sociale con sede a <strong>Roma</strong>, nata per diffondere la cultura e la passione per le <strong>arti recitative, teatrali e cinematografiche</strong>, con un'attenzione particolare al <b class="hl-lime">doppiaggio</b>. Organizziamo corsi, laboratori e iniziative culturali per i soci, e portiamo avanti un impegno sociale concreto. Se ti ritrovi in tutto questo, puoi unirti a noi come <strong>socio</strong>.
+      </p>
+      <div class="about__cta reveal" data-reveal><a href="https://api.whatsapp.com/send?phone=393496034131" class="btn btn--wa" target="_blank" rel="noopener" data-cursor>
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.9 4.44-9.9 9.9 0 1.75.46 3.45 1.32 4.95L2 22l5.3-1.39c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.9-4.44 9.9-9.9S17.5 2 12.04 2zm5.8 14.06c-.24.68-1.4 1.3-1.94 1.35-.5.05-1.13.07-1.82-.11-.42-.13-.96-.31-1.65-.6-2.9-1.25-4.8-4.17-4.94-4.36-.14-.19-1.18-1.57-1.18-3s.75-2.13 1.02-2.42c.27-.29.58-.36.77-.36l.55.01c.18.01.42-.07.65.5.24.58.82 2 .89 2.14.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.17-.29.37-.42.5-.14.14-.28.29-.12.57.16.29.72 1.19 1.55 1.92 1.06.95 1.96 1.24 2.24 1.38.28.14.44.12.6-.07.16-.19.69-.81.87-1.09.18-.28.36-.23.6-.14.24.09 1.55.73 1.82.86.27.14.45.21.51.32.07.12.07.66-.17 1.34z"/></svg>
+        Associati ora <span class="btn__chev">›</span></a></div>
+    </div>
+    <div class="about__media reveal" data-reveal>
+      <div class="reiss-chart" data-reveal aria-label="Cosa facciamo">
+        <div class="reiss-chart__head"><b>Cosa facciamo</b><span class="reiss-chart__brand">La Compagnia · APS</span></div>
+        <div class="rr" style="grid-template-columns:1fr;text-align:left"><span class="rr__l" style="text-align:left">🎙️ <strong style="color:var(--txt)">Corsi di doppiaggio</strong> in sala e leggìo</span></div>
+        <div class="rr" style="grid-template-columns:1fr;text-align:left"><span class="rr__l" style="text-align:left">🎭 <strong style="color:var(--txt)">Recitazione e teatro</strong> per tutti i livelli</span></div>
+        <div class="rr" style="grid-template-columns:1fr;text-align:left"><span class="rr__l" style="text-align:left">🗣️ <strong style="color:var(--txt)">Dizione</strong>, respirazione e uso della voce</span></div>
+        <div class="rr" style="grid-template-columns:1fr;text-align:left"><span class="rr__l" style="text-align:left">🤝 <strong style="color:var(--txt)">Volontariato</strong> e iniziative culturali</span></div>
+        <div class="rr" style="grid-template-columns:1fr;text-align:left"><span class="rr__l" style="text-align:left">♿ <strong style="color:var(--txt)">Inclusione:</strong> sostegno a chi è in difficoltà economica o disabilità</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="container stats__grid">
+    <div class="stat reveal" data-reveal><span class="stat__num">APS</span><p class="stat__desc">Associazione di <strong>promozione sociale</strong> con sede a Roma</p></div>
+    <div class="stat reveal" data-reveal><span class="stat__num" data-count="4" data-suffix="">0</span><p class="stat__desc">Ambiti: <strong>doppiaggio, recitazione, teatro e dizione</strong></p></div>
+    <div class="stat reveal" data-reveal><span class="stat__num" data-count="100" data-suffix="%">0%</span><p class="stat__desc"><strong>No-profit:</strong> ogni contributo torna alla comunità</p></div>
+    <div class="stat reveal" data-reveal><span class="stat__num">∞</span><p class="stat__desc">Una <strong>comunità aperta</strong> a chi condivide la stessa passione</p></div>
+  </div>
+</section>
+
+<!-- COME FUNZIONA (metodo sticky 3 step) -->
+<section class="method" id="metodo">
+  <div class="method__pin">
+    <div class="method__bg" aria-hidden="true"><div class="method__glow" id="methodGlow"></div></div>
+    <div class="method__header">
+      <span class="kicker kicker--light">Perché sceglierci</span>
+      <h2 class="method__title">Non solo un corso.<br />Un vero trampolino.</h2>
+    </div>
+    <div class="method__stage">
+      <div class="step is-active" data-step="1">
+        <div class="step__num">01</div>
+        <div class="step__content">
+          <h3 class="step__title">Il provino in sala</h3>
+          <p class="step__txt">Al termine del corso ti portiamo in una vera sala di doppiaggio: farai un provino con <strong>direttori e maestri di doppiaggio veri</strong>. Non una simulazione, ma il mestiere davvero.</p>
+          <ul class="step__tags"><li>Sala di doppiaggio vera</li><li>Direttori e maestri</li><li>Provino finale</li></ul>
+        </div>
+        <div class="step__visual"><svg viewBox="0 0 200 200" class="step__svg">
+          <circle cx="100" cy="100" r="80" stroke="rgba(217,225,232,0.1)" stroke-width="1" fill="none"/>
+          <circle cx="100" cy="100" r="60" stroke="rgba(217,225,232,0.15)" stroke-width="1" fill="none"/>
+          <circle cx="100" cy="100" r="40" stroke="rgba(217,225,232,0.2)" stroke-width="1" fill="none"/>
+          <g class="step__pulse"><circle cx="100" cy="20" r="3" fill="#C9AE86"/><circle cx="170" cy="60" r="3" fill="#C9AE86"/><circle cx="170" cy="140" r="3" fill="#C9AE86"/><circle cx="100" cy="180" r="3" fill="#C9AE86"/><circle cx="30" cy="140" r="3" fill="#C9AE86"/><circle cx="30" cy="60" r="3" fill="#C9AE86"/></g>
+        </svg></div>
+      </div>
+      <div class="step" data-step="2">
+        <div class="step__num">02</div>
+        <div class="step__content">
+          <h3 class="step__title">Inizi a lavorare subito</h3>
+          <p class="step__txt">Se sei bravo e ci credi davvero, ti diamo la possibilità di <strong>iniziare a lavorare fin da subito</strong> come professionista. Qui il talento trova una porta aperta, non una lista d'attesa.</p>
+          <ul class="step__tags"><li>Opportunità concreta</li><li>Dal corso al leggìo</li><li>Il talento premiato</li></ul>
+        </div>
+        <div class="step__visual"><svg viewBox="0 0 200 200" class="step__svg"><g class="step__network">
+          <line x1="50" y1="50" x2="150" y2="100" stroke="rgba(201,174,134,0.6)" stroke-width="1"/>
+          <line x1="150" y1="100" x2="50" y2="150" stroke="rgba(201,174,134,0.6)" stroke-width="1"/>
+          <line x1="50" y1="50" x2="50" y2="150" stroke="rgba(201,174,134,0.6)" stroke-width="1"/>
+          <line x1="150" y1="100" x2="100" y2="40" stroke="rgba(224,201,160,0.6)" stroke-width="1"/>
+          <line x1="50" y1="150" x2="100" y2="170" stroke="rgba(224,201,160,0.6)" stroke-width="1"/>
+          <circle cx="50" cy="50" r="6" fill="#C9AE86"/><circle cx="150" cy="100" r="6" fill="#E0C9A0"/><circle cx="50" cy="150" r="6" fill="#C9AE86"/><circle cx="100" cy="40" r="5" fill="#E0C9A0"/><circle cx="100" cy="170" r="5" fill="#C9AE86"/>
+        </g></svg></div>
+      </div>
+      <div class="step" data-step="3">
+        <div class="step__num">03</div>
+        <div class="step__content">
+          <h3 class="step__title">Ti rendiamo un professionista</h3>
+          <p class="step__txt">Noi ci mettiamo il nostro: metodo, pratica e cura, passo dopo passo, per trasformare la tua voce in un mestiere. Il resto lo metti tu, con la passione.</p>
+          <ul class="step__tags"><li>Metodo e pratica</li><li>Cura personale</li><li>Voce da professionista</li></ul>
+        </div>
+        <div class="step__visual"><svg viewBox="0 0 200 200" class="step__svg"><g class="step__growth">
+          <path d="M 30 170 Q 70 170 80 130 T 130 80 T 170 30" stroke="url(#gradStep3)" stroke-width="2" fill="none" stroke-linecap="round" class="step__line"/>
+          <defs><linearGradient id="gradStep3" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" stop-color="#C9AE86"/><stop offset="100%" stop-color="#E0C9A0"/></linearGradient></defs>
+          <circle cx="170" cy="30" r="10" fill="#C9AE86"/><circle cx="170" cy="30" r="20" fill="#C9AE86" opacity="0.15"/>
+        </g></svg></div>
+      </div>
+    </div>
+    <div class="method__progress" aria-hidden="true">
+      <div class="method__progress-track"><div class="method__progress-fill" id="methodProgress"></div></div>
+      <div class="method__progress-labels"><span data-step-label="1">Provino in sala</span><span data-step-label="2">Lavori subito</span><span data-step-label="3">Da professionista</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- CORSI -->
+<section class="learn" id="corsi">
+  <div class="container">
+    <h2 class="section-title" data-split>I nostri <span class="accent accent--italic">corsi e laboratori</span></h2>
+    <p class="section-sub reveal" data-reveal>Un percorso per chi vuole avvicinarsi al <strong>doppiaggio</strong> e alle arti recitative, in un ambiente accogliente e alla portata di tutti.</p>
+    <div class="bento" id="bento">
+      <article class="card card--feature reveal" data-reveal data-tilt>
+        <div class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3M8 21h8"/></svg></div>
+        <h3 class="card__title">Doppiaggio</h3>
+        <p class="card__text">Il cuore della Compagnia: <strong>leggìo, sala e microfono</strong>. Impari sincronismo, interpretazione e uso della voce sul copione.</p>
+        <a href="https://api.whatsapp.com/send?phone=393496034131" class="card__link" target="_blank" rel="noopener" data-cursor>Richiedi informazioni ›</a>
+      </article>
+
+      <article class="card card--feature reveal" data-reveal data-tilt>
+        <div class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 5h16M4 12h16M4 19h10"/><circle cx="18" cy="19" r="2"/></svg></div>
+        <h3 class="card__title">Recitazione &amp; Teatro</h3>
+        <p class="card__text">Corpo, voce e presenza scenica. <strong>Dizione, improvvisazione</strong> e lavoro sul personaggio, dal principiante a chi vuole perfezionarsi.</p>
+        <a href="https://api.whatsapp.com/send?phone=393496034131" class="card__link" target="_blank" rel="noopener" data-cursor>Richiedi informazioni ›</a>
+      </article>
+
+      <article class="card card--feature reveal" data-reveal data-tilt>
+        <div class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 15a4 4 0 0 0 4 4h1l4 3v-14l-4 3H8a4 4 0 0 0-4 4z"/><path d="M17 9a4 4 0 0 1 0 6M19.5 6.5a8 8 0 0 1 0 11"/></svg></div>
+        <h3 class="card__title">Dizione</h3>
+        <p class="card__text">La pulizia del parlato: <strong>respirazione, articolazione</strong> e ritmo. Le fondamenta della voce, per il leggìo e per il palco.</p>
+        <a href="https://api.whatsapp.com/send?phone=393496034131" class="card__link" target="_blank" rel="noopener" data-cursor>Richiedi informazioni ›</a>
+      </article>
+
+      <article class="card card--feature reveal" data-reveal data-tilt>
+        <div class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l2.5 5 5.5.8-4 3.9.9 5.5L12 21l-4.9-2.9.9-5.5-4-3.9L9.5 8z"/></svg></div>
+        <h3 class="card__title">Laboratori &amp; iniziative culturali</h3>
+        <p class="card__text">Incontri, workshop ed eventi aperti ai soci: occasioni per <strong>fare esperienza</strong> e conoscere chi condivide la tua passione.</p>
+        <a href="https://api.whatsapp.com/send?phone=393496034131" class="card__link" target="_blank" rel="noopener" data-cursor>Richiedi informazioni ›</a>
+      </article>
+
+      <article class="card card--feature card--wide reveal" data-reveal data-tilt>
+        <div class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg></div>
+        <h3 class="card__title">Impegno sociale &amp; inclusione</h3>
+        <p class="card__text">Crediamo che l'arte debba essere di tutti. Portiamo avanti volontariato e sosteniamo chi desidera avvicinarsi a queste discipline pur trovandosi in <strong>difficoltà economica</strong> o in <strong>condizione di disabilità</strong>. È il senso stesso di essere un'APS.</p>
+        <a href="https://api.whatsapp.com/send?phone=393496034131" class="card__link" target="_blank" rel="noopener" data-cursor>Unisciti al progetto ›</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- DISCIPLINE (emoji grid) -->
+<section class="tratti" id="discipline">
+  <div class="container">
+    <h2 class="section-title" data-split>Cosa <span class="accent accent--italic">imparerai</span></h2>
+    <p class="section-sub reveal" data-reveal>Dalla tecnica di sala all'espressività sul palco: gli strumenti dell'attore e del doppiatore.</p>
+    <div class="tratti__grid reveal" data-reveal>
+      <span class="tratto" style="--i:0">🎙️ Doppiaggio</span>
+      <span class="tratto" style="--i:1">🎭 Recitazione</span>
+      <span class="tratto" style="--i:2">🎬 Teatro</span>
+      <span class="tratto" style="--i:3">🗣️ Dizione</span>
+      <span class="tratto" style="--i:4">🎧 Uso della voce</span>
+      <span class="tratto" style="--i:5">🎞️ Sincronismo</span>
+      <span class="tratto" style="--i:6">💬 Interpretazione</span>
+      <span class="tratto" style="--i:7">🎤 Speakeraggio</span>
+      <span class="tratto" style="--i:8">🫁 Respirazione</span>
+      <span class="tratto" style="--i:9">🩰 Espressività</span>
+      <span class="tratto" style="--i:10">📖 Lettura del copione</span>
+      <span class="tratto" style="--i:11">🤝 Lavoro di gruppo</span>
+    </div>
+    <div class="tratti__cta reveal" data-reveal>
+      <a href="https://api.whatsapp.com/send?phone=393496034131" class="btn btn--wa" target="_blank" rel="noopener" data-cursor>
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.9 4.44-9.9 9.9 0 1.75.46 3.45 1.32 4.95L2 22l5.3-1.39c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.9-4.44 9.9-9.9S17.5 2 12.04 2zm5.8 14.06c-.24.68-1.4 1.3-1.94 1.35-.5.05-1.13.07-1.82-.11-.42-.13-.96-.31-1.65-.6-2.9-1.25-4.8-4.17-4.94-4.36-.14-.19-1.18-1.57-1.18-3s.75-2.13 1.02-2.42c.27-.29.58-.36.77-.36l.55.01c.18.01.42-.07.65.5.24.58.82 2 .89 2.14.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.17-.29.37-.42.5-.14.14-.28.29-.12.57.16.29.72 1.19 1.55 1.92 1.06.95 1.96 1.24 2.24 1.38.28.14.44.12.6-.07.16-.19.69-.81.87-1.09.18-.28.36-.23.6-.14.24.09 1.55.73 1.82.86.27.14.45.21.51.32.07.12.07.66-.17 1.34z"/></svg>
+        Associati e inizia <span class="btn__chev">›</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CORSI NEL DETTAGLIO + DIVENTA SOCIO -->
+<section class="curriculum" id="dettaglio">
+  <div class="container">
+    <h2 class="section-title" data-split>I corsi<br /><span class="accent accent--italic">nel dettaglio</span></h2>
+    <p class="section-sub reveal" data-reveal>Un percorso pensato per farti partire dalle basi e arrivare al leggìo, passo dopo passo.</p>
+    <div class="curriculum__grid">
+      <div class="modules reveal" data-reveal>
+        <div class="modules__head"><h3 class="modules__title">Come sono strutturati</h3><p class="modules__meta">Doppiaggio · Recitazione · Teatro · Dizione</p></div>
+        <div class="accordion" data-accordion>
+          <div class="acc-item"><button class="acc-trigger" data-cursor><span class="acc-meta">Modulo 1</span><span class="acc-q">Voce, respirazione e dizione</span><span class="acc-chev" aria-hidden="true">⌄</span></button><div class="acc-panel"><p>Il tuo strumento principale: respiro, articolazione e pulizia della dizione. Le fondamenta per ogni disciplina.</p></div></div>
+          <div class="acc-item"><button class="acc-trigger" data-cursor><span class="acc-meta">Modulo 2</span><span class="acc-q">Recitazione e interpretazione</span><span class="acc-chev" aria-hidden="true">⌄</span></button><div class="acc-panel"><p>Lavoro sul personaggio, emozione e presenza scenica. Dare verità a ciò che dici, sul palco e al microfono.</p></div></div>
+          <div class="acc-item"><button class="acc-trigger" data-cursor><span class="acc-meta">Modulo 3</span><span class="acc-q">Tecnica del doppiaggio in sala</span><span class="acc-chev" aria-hidden="true">⌄</span></button><div class="acc-panel"><p>Leggìo, sincronismo labiale, ritmo e adattamento. Doppiare una scena rispettando personaggio e immagine.</p></div></div>
+          <div class="acc-item"><button class="acc-trigger" data-cursor><span class="acc-meta">Modulo 4</span><span class="acc-q">Teatro e lavoro di gruppo</span><span class="acc-chev" aria-hidden="true">⌄</span></button><div class="acc-panel"><p>Improvvisazione, ascolto e scena condivisa. Il gruppo come palestra dell'attore e della comunità.</p></div></div>
+          <div class="acc-item"><button class="acc-trigger" data-cursor><span class="acc-meta">Modulo 5</span><span class="acc-q">Preparazione al provino in sala</span><span class="acc-chev" aria-hidden="true">⌄</span></button><div class="acc-panel"><p>Ci prepariamo insieme al momento più importante: il provino in una vera sala di doppiaggio, con direttori e maestri veri. Chi è pronto può iniziare subito a lavorare.</p></div></div>
+          <div class="acc-item"><button class="acc-trigger" data-cursor><span class="acc-meta">Modulo 6</span><span class="acc-q">Laboratori, saggi e iniziative</span><span class="acc-chev" aria-hidden="true">⌄</span></button><div class="acc-panel"><p>Mettere in pratica ciò che si impara: progetti, saggi ed eventi culturali aperti alla comunità.</p></div></div>
+        </div>
+      </div>
+      <aside class="pricing reveal" data-reveal>
+        <div class="pricing__sticky pricing__sticky--light">
+          <span class="pricing__badge pricing__badge--live"><span class="dot"></span> Iscrizioni <em>aperte</em></span>
+          <h3 class="pricing__title">Diventa <span class="accent accent--italic">socio</span></h3>
+          <p class="pricing__desc">Entra nella Compagnia degli Anelli e accedi a corsi, laboratori e alla vita dell'associazione.</p>
+          <hr class="pricing__hr" />
+          <p class="pricing__incl">Cosa significa essere socio:</p>
+          <ul class="checklist socio__list">
+            <li><span class="check">✓</span> Accesso a <strong>corsi e laboratori</strong> di doppiaggio, recitazione, teatro e dizione</li>
+            <li><span class="check">✓</span> Una <strong>comunità</strong> di persone con la stessa passione</li>
+            <li><span class="check">✓</span> Iniziative culturali ed eventi riservati ai soci</li>
+            <li><span class="check">✓</span> Un'associazione <strong>no-profit e trasparente</strong></li>
+            <li><span class="check">✓</span> Agevolazioni per chi è in <strong>difficoltà economica</strong> o disabilità</li>
+          </ul>
+          <a href="https://api.whatsapp.com/send?phone=393496034131" class="btn btn--wa btn--block" target="_blank" rel="noopener" data-cursor>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.9 4.44-9.9 9.9 0 1.75.46 3.45 1.32 4.95L2 22l5.3-1.39c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.9-4.44 9.9-9.9S17.5 2 12.04 2zm5.8 14.06c-.24.68-1.4 1.3-1.94 1.35-.5.05-1.13.07-1.82-.11-.42-.13-.96-.31-1.65-.6-2.9-1.25-4.8-4.17-4.94-4.36-.14-.19-1.18-1.57-1.18-3s.75-2.13 1.02-2.42c.27-.29.58-.36.77-.36l.55.01c.18.01.42-.07.65.5.24.58.82 2 .89 2.14.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.17-.29.37-.42.5-.14.14-.28.29-.12.57.16.29.72 1.19 1.55 1.92 1.06.95 1.96 1.24 2.24 1.38.28.14.44.12.6-.07.16-.19.69-.81.87-1.09.18-.28.36-.23.6-.14.24.09 1.55.73 1.82.86.27.14.45.21.51.32.07.12.07.66-.17 1.34z"/></svg>
+            Associati su WhatsApp <span class="btn__chev">›</span></a>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- TRASPARENZA -->
+<section class="trasp" id="trasparenza">
+  <div class="container">
+    <div class="trasp__box reveal" data-reveal>
+      <div class="trasp__body">
+        <div class="badge"><span class="badge__dot"></span> Trasparenza · APS</div>
+        <h2 class="trasp__title">La nostra casa di vetro</h2>
+        <p class="trasp__txt">Come Associazione di Promozione Sociale crediamo che la fiducia si costruisca con la <strong>trasparenza</strong>. Per questo mettiamo a disposizione di soci e cittadini tutti gli atti e i documenti dell'associazione: chiunque può consultarli liberamente, in qualsiasi momento.</p>
+        <div class="trasp__list">
+          <span class="trasp__chip">📄 Statuto e atto costitutivo</span>
+          <span class="trasp__chip">📊 Bilanci e rendiconti</span>
+          <span class="trasp__chip">🗂️ Verbali e delibere</span>
+          <span class="trasp__chip">📌 Documenti dell'APS</span>
+        </div>
+        <a href="https://drive.google.com/drive/folders/1-U8OkkRwjO1s0Zag172LppEENqMxICPA?usp=sharing" class="btn btn--primary btn--wa-lg" target="_blank" rel="noopener" data-cursor>Consulta gli atti e i documenti <span class="btn__chev">›</span></a>
+      </div>
+      <div class="trasp__aside">
+        <div class="trasp__doc" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h6M9 9h1"/></svg></div>
+        <strong>Tutto pubblico, tutto consultabile.</strong>
+        <p>Cartella ufficiale con statuto, bilanci e atti dell'associazione.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RECENSIONI -->
+<section class="reviews" id="reviews">
+  <div class="container">
+    <h2 class="section-title" data-split>Le voci di chi<br /><span class="accent accent--italic">fa parte della Compagnia</span></h2>
+    <p class="section-sub reveal" data-reveal>Soci e allievi raccontano i corsi di doppiaggio e recitazione e la vita dell'associazione.</p>
+  </div>
+  <div class="reviews__marquee">
+    <div class="reviews__row"><div class="reviews__track" data-rowset>
+      <article class="review"><span class="rating__stars rating__stars--google" aria-hidden="true">★★★★★</span><h3 class="review__title">"Il corso di doppiaggio è una scoperta."</h3><p class="review__text">Non avevo mai provato il leggìo. In pochi incontri ho capito la sala, il sincronismo e quanto la voce possa dire.</p><div class="review__author"><span class="g-av g-av--lg" style="--c:#4285F4">GR</span><span><strong>Giulia R.</strong><em>Allieva doppiaggio</em></span></div></article>
+      <article class="review"><span class="rating__stars rating__stars--google" aria-hidden="true">★★★★★</span><h3 class="review__title">"Una comunità, non una scuola qualsiasi."</h3><p class="review__text">Qui non paghi un servizio: entri in un gruppo di persone che condividono la stessa passione. Si respira subito.</p><div class="review__author"><span class="g-av g-av--lg" style="--c:#0F9D58">MD</span><span><strong>Marco D.</strong><em>Socio</em></span></div></article>
+      <article class="review"><span class="rating__stars rating__stars--google" aria-hidden="true">★★★★★</span><h3 class="review__title">"Dizione e recitazione spiegate bene."</h3><p class="review__text">Partivo da zero. Il lavoro su respiro e dizione mi ha dato una sicurezza che non avevo, anche fuori dal palco.</p><div class="review__author"><span class="g-av g-av--lg" style="--c:#DB4437">EB</span><span><strong>Elena B.</strong><em>Corso di recitazione</em></span></div></article>
+      <article class="review"><span class="rating__stars rating__stars--google" aria-hidden="true">★★★★★</span><h3 class="review__title">"Accolgono davvero tutti."</h3><p class="review__text">Come APS sostengono chi ha meno possibilità. Ho trovato porte aperte e nessun giudizio: raro e bellissimo.</p><div class="review__author"><span class="g-av g-av--lg" style="--c:#AB47BC">DR</span><span><strong>Davide R.</strong><em>Socio volontario</em></span></div></article>
+      <article class="review"><span class="rating__stars rating__stars--google" aria-hidden="true">★★★★★</span><h3 class="review__title">"Dal teatro al microfono."</h3><p class="review__text">Facevo teatro e cercavo il doppiaggio. La Compagnia mi ha fatto unire le due cose in modo naturale.</p><div class="review__author"><span class="g-av g-av--lg" style="--c:#FF7043">SC</span><span><strong>Sara C.</strong><em>Allieva teatro & doppiaggio</em></span></div></article>
+      <article class="review"><span class="rating__stars rating__stars--google" aria-hidden="true">★★★★★</span><h3 class="review__title">"Il corso di doppiaggio è una scoperta."</h3><p class="review__text">Non avevo mai provato il leggìo. In pochi incontri ho capito la sala, il sincronismo e quanto la voce possa dire.</p><div class="review__author"><span class="g-av g-av--lg" style="--c:#4285F4">GR</span><span><strong>Giulia R.</strong><em>Allieva doppiaggio</em></span></div></article>
+      <article class="review"><span class="rating__stars rating__stars--google" aria-hidden="true">★★★★★</span><h3 class="review__title">"Una comunità, non una scuola qualsiasi."</h3><p class="review__text">Qui non paghi un servizio: entri in un gruppo di persone che condividono la stessa passione. Si respira subito.</p><div class="review__author"><span class="g-av g-av--lg" style="--c:#0F9D58">MD</span><span><strong>Marco D.</strong><em>Socio</em></span></div></article>
+      <article class="review"><span class="rating__stars rating__stars--google" aria-hidden="true">★★★★★</span><h3 class="review__title">"Dizione e recitazione spiegate bene."</h3><p class="review__text">Partivo da zero. Il lavoro su respiro e dizione mi ha dato una sicurezza che non avevo, anche fuori dal palco.</p><div class="review__author"><span class="g-av g-av--lg" style="--c:#DB4437">EB</span><span><strong>Elena B.</strong><em>Corso di recitazione</em></span></div></article>
+      <article class="review"><span class="rating__stars rating__stars--google" aria-hidden="true">★★★★★</span><h3 class="review__title">"Accolgono davvero tutti."</h3><p class="review__text">Come APS sostengono chi ha meno possibilità. Ho trovato porte aperte e nessun giudizio: raro e bellissimo.</p><div class="review__author"><span class="g-av g-av--lg" style="--c:#AB47BC">DR</span><span><strong>Davide R.</strong><em>Socio volontario</em></span></div></article>
+      <article class="review"><span class="rating__stars rating__stars--google" aria-hidden="true">★★★★★</span><h3 class="review__title">"Dal teatro al microfono."</h3><p class="review__text">Facevo teatro e cercavo il doppiaggio. La Compagnia mi ha fatto unire le due cose in modo naturale.</p><div class="review__author"><span class="g-av g-av--lg" style="--c:#FF7043">SC</span><span><strong>Sara C.</strong><em>Allieva teatro & doppiaggio</em></span></div></article>
+      <article class="review"><span class="rating__stars rating__stars--google" aria-hidden="true">★★★★★</span><h3 class="review__title">"Il corso di doppiaggio è una scoperta."</h3><p class="review__text">Non avevo mai provato il leggìo. In pochi incontri ho capito la sala, il sincronismo e quanto la voce possa dire.</p><div class="review__author"><span class="g-av g-av--lg" style="--c:#4285F4">GR</span><span><strong>Giulia R.</strong><em>Allieva doppiaggio</em></span></div></article>
+      <article class="review"><span class="rating__stars rating__stars--google" aria-hidden="true">★★★★★</span><h3 class="review__title">"Una comunità, non una scuola qualsiasi."</h3><p class="review__text">Qui non paghi un servizio: entri in un gruppo di persone che condividono la stessa passione. Si respira subito.</p><div class="review__author"><span class="g-av g-av--lg" style="--c:#0F9D58">MD</span><span><strong>Marco D.</strong><em>Socio</em></span></div></article>
+      <article class="review"><span class="rating__stars rating__stars--google" aria-hidden="true">★★★★★</span><h3 class="review__title">"Dizione e recitazione spiegate bene."</h3><p class="review__text">Partivo da zero. Il lavoro su respiro e dizione mi ha dato una sicurezza che non avevo, anche fuori dal palco.</p><div class="review__author"><span class="g-av g-av--lg" style="--c:#DB4437">EB</span><span><strong>Elena B.</strong><em>Corso di recitazione</em></span></div></article>
+      <article class="review"><span class="rating__stars rating__stars--google" aria-hidden="true">★★★★★</span><h3 class="review__title">"Accolgono davvero tutti."</h3><p class="review__text">Come APS sostengono chi ha meno possibilità. Ho trovato porte aperte e nessun giudizio: raro e bellissimo.</p><div class="review__author"><span class="g-av g-av--lg" style="--c:#AB47BC">DR</span><span><strong>Davide R.</strong><em>Socio volontario</em></span></div></article>
+      <article class="review"><span class="rating__stars rating__stars--google" aria-hidden="true">★★★★★</span><h3 class="review__title">"Dal teatro al microfono."</h3><p class="review__text">Facevo teatro e cercavo il doppiaggio. La Compagnia mi ha fatto unire le due cose in modo naturale.</p><div class="review__author"><span class="g-av g-av--lg" style="--c:#FF7043">SC</span><span><strong>Sara C.</strong><em>Allieva teatro & doppiaggio</em></span></div></article>
+    </div></div>
+    <div class="reviews__row"><div class="reviews__track reviews__track--rev" data-rowset>
+      <article class="review"><span class="rating__stars rating__stars--google" aria-hidden="true">★★★★★</span><h3 class="review__title">"Ambiente umano e professionale."</h3><p class="review__text">Ti seguono davvero, con pazienza. Ogni incontro è tecnica vera ma anche divertimento e leggerezza.</p><div class="review__author"><span class="g-av g-av--lg" style="--c:#00ACC1">LM</span><span><strong>Luca M.</strong><em>Allievo doppiaggio</em></span></div></article>
+      <article class="review"><span class="rating__stars rating__stars--google" aria-hidden="true">★★★★★</span><h3 class="review__title">"Ho vinto la timidezza."</h3><p class="review__text">Il lavoro di gruppo e le improvvisazioni mi hanno sbloccata. Uso la voce con una consapevolezza nuova.</p><div class="review__author"><span class="g-av g-av--lg" style="--c:#5C6BC0">CG</span><span><strong>Chiara G.</strong><em>Socia</em></span></div></article>
+      <article class="review"><span class="rating__stars rating__stars--google" aria-hidden="true">★★★★★</span><h3 class="review__title">"Doppiare una scena è emozionante."</h3><p class="review__text">La prima volta al leggìo, in sincrono con l'immagine, non la scordo. Qui ho capito cosa voglio fare.</p><div class="review__author"><span class="g-av g-av--lg" style="--c:#EC407A">AC</span><span><strong>Andrea C.</strong><em>Corso di doppiaggio</em></span></div></article>
+      <article class="review"><span class="rating__stars rating__stars--google" aria-hidden="true">★★★★★</span><h3 class="review__title">"Iniziative culturali di valore."</h3><p class="review__text">Oltre ai corsi, la Compagnia organizza eventi aperti. Si sente la voglia di far crescere la cultura sul territorio.</p><div class="review__author"><span class="g-av g-av--lg" style="--c:#F4B400">VR</span><span><strong>Valentina R.</strong><em>Socia</em></span></div></article>
+      <article class="review"><span class="rating__stars rating__stars--google" aria-hidden="true">★★★★★</span><h3 class="review__title">"Passione vera, non improvvisata."</h3><p class="review__text">Si vede che chi guida i corsi ama questo mestiere. Rigore quando serve, sempre con il sorriso.</p><div class="review__author"><span class="g-av g-av--lg" style="--c:#0F9D58">FP</span><span><strong>Francesco P.</strong><em>Allievo teatro</em></span></div></article>
+      <article class="review"><span class="rating__stars rating__stars--google" aria-hidden="true">★★★★★</span><h3 class="review__title">"Ambiente umano e professionale."</h3><p class="review__text">Ti seguono davvero, con pazienza. Ogni incontro è tecnica vera ma anche divertimento e leggerezza.</p><div class="review__author"><span class="g-av g-av--lg" style="--c:#00ACC1">LM</span><span><strong>Luca M.</strong><em>Allievo doppiaggio</em></span></div></article>
+      <article class="review"><span class="rating__stars rating__stars--google" aria-hidden="true">★★★★★</span><h3 class="review__title">"Ho vinto la timidezza."</h3><p class="review__text">Il lavoro di gruppo e le improvvisazioni mi hanno sbloccata. Uso la voce con una consapevolezza nuova.</p><div class="review__author"><span class="g-av g-av--lg" style="--c:#5C6BC0">CG</span><span><strong>Chiara G.</strong><em>Socia</em></span></div></article>
+      <article class="review"><span class="rating__stars rating__stars--google" aria-hidden="true">★★★★★</span><h3 class="review__title">"Doppiare una scena è emozionante."</h3><p class="review__text">La prima volta al leggìo, in sincrono con l'immagine, non la scordo. Qui ho capito cosa voglio fare.</p><div class="review__author"><span class="g-av g-av--lg" style="--c:#EC407A">AC</span><span><strong>Andrea C.</strong><em>Corso di doppiaggio</em></span></div></article>
+      <article class="review"><span class="rating__stars rating__stars--google" aria-hidden="true">★★★★★</span><h3 class="review__title">"Iniziative culturali di valore."</h3><p class="review__text">Oltre ai corsi, la Compagnia organizza eventi aperti. Si sente la voglia di far crescere la cultura sul territorio.</p><div class="review__author"><span class="g-av g-av--lg" style="--c:#F4B400">VR</span><span><strong>Valentina R.</strong><em>Socia</em></span></div></article>
+      <article class="review"><span class="rating__stars rating__stars--google" aria-hidden="true">★★★★★</span><h3 class="review__title">"Passione vera, non improvvisata."</h3><p class="review__text">Si vede che chi guida i corsi ama questo mestiere. Rigore quando serve, sempre con il sorriso.</p><div class="review__author"><span class="g-av g-av--lg" style="--c:#0F9D58">FP</span><span><strong>Francesco P.</strong><em>Allievo teatro</em></span></div></article>
+      <article class="review"><span class="rating__stars rating__stars--google" aria-hidden="true">★★★★★</span><h3 class="review__title">"Ambiente umano e professionale."</h3><p class="review__text">Ti seguono davvero, con pazienza. Ogni incontro è tecnica vera ma anche divertimento e leggerezza.</p><div class="review__author"><span class="g-av g-av--lg" style="--c:#00ACC1">LM</span><span><strong>Luca M.</strong><em>Allievo doppiaggio</em></span></div></article>
+      <article class="review"><span class="rating__stars rating__stars--google" aria-hidden="true">★★★★★</span><h3 class="review__title">"Ho vinto la timidezza."</h3><p class="review__text">Il lavoro di gruppo e le improvvisazioni mi hanno sbloccata. Uso la voce con una consapevolezza nuova.</p><div class="review__author"><span class="g-av g-av--lg" style="--c:#5C6BC0">CG</span><span><strong>Chiara G.</strong><em>Socia</em></span></div></article>
+      <article class="review"><span class="rating__stars rating__stars--google" aria-hidden="true">★★★★★</span><h3 class="review__title">"Doppiare una scena è emozionante."</h3><p class="review__text">La prima volta al leggìo, in sincrono con l'immagine, non la scordo. Qui ho capito cosa voglio fare.</p><div class="review__author"><span class="g-av g-av--lg" style="--c:#EC407A">AC</span><span><strong>Andrea C.</strong><em>Corso di doppiaggio</em></span></div></article>
+      <article class="review"><span class="rating__stars rating__stars--google" aria-hidden="true">★★★★★</span><h3 class="review__title">"Iniziative culturali di valore."</h3><p class="review__text">Oltre ai corsi, la Compagnia organizza eventi aperti. Si sente la voglia di far crescere la cultura sul territorio.</p><div class="review__author"><span class="g-av g-av--lg" style="--c:#F4B400">VR</span><span><strong>Valentina R.</strong><em>Socia</em></span></div></article>
+      <article class="review"><span class="rating__stars rating__stars--google" aria-hidden="true">★★★★★</span><h3 class="review__title">"Passione vera, non improvvisata."</h3><p class="review__text">Si vede che chi guida i corsi ama questo mestiere. Rigore quando serve, sempre con il sorriso.</p><div class="review__author"><span class="g-av g-av--lg" style="--c:#0F9D58">FP</span><span><strong>Francesco P.</strong><em>Allievo teatro</em></span></div></article>
+    </div></div>
+  </div>
+</section>
+
+<!-- TRUST / VIDEO TESTIMONIANZA -->
+<section class="trust-video" id="trust">
+  <div class="container">
+    <h2 class="section-title" data-split>Guarda <span class="accent accent--italic">chi siamo</span></h2>
+    <p class="section-sub reveal" data-reveal>Un assaggio della nostra realtà: le persone, la sala e la passione che ci muove ogni giorno.</p>
+    <div class="trust-video__frame reveal" data-reveal>
+      <video class="trust-video__vid" controls playsinline preload="metadata" poster="testimonianze-poster.jpg">
+        <source src="hero.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+</section>
+
+<!-- PRIMA / DOPO -->
+<section class="compare">
+  <div class="container">
+    <h2 class="section-title" data-split>Da spettatore a <span class="accent accent--italic">protagonista</span></h2>
+    <p class="section-sub reveal" data-reveal>Cosa cambia quando smetti di sognarlo da fuori e <strong>entri in una comunità</strong> che ti forma e ti sostiene.</p>
+    <div class="compare__grid" data-story>
+      <div class="story-rail" aria-hidden="true"><span class="story-rail__track"></span><span class="story-rail__fill"></span><span class="story-rail__dot" style="top:6%"></span><span class="story-rail__dot" style="top:50%"></span><span class="story-rail__dot" style="top:94%"></span></div>
+      <div class="compare__col compare__col--before reveal" data-reveal>
+        <span class="compare__tag compare__tag--before">Prima</span>
+        <h3 class="compare__head">Da solo, davanti allo schermo</h3>
+        <ul class="compare__list compare__list--bad">
+          <li><span class="mk mk--x">✕</span> La passione per il doppiaggio resta un sogno nel cassetto</li>
+          <li><span class="mk mk--x">✕</span> Nessuno che ti insegni tecnica, voce e dizione</li>
+          <li><span class="mk mk--x">✕</span> Corsi cari e trattati come un semplice servizio</li>
+          <li><span class="mk mk--x">✕</span> Nessuna comunità con cui condividere e crescere</li>
+        </ul>
+      </div>
+      <div class="compare__col compare__col--after reveal" data-reveal>
+        <div class="compare__after-head">
+          <span class="compare__tag compare__tag--after">Dopo</span>
+          <div class="compare__growth">
+            <span class="rating__stars rating__stars--green" aria-hidden="true">★★★★★</span>
+            <div class="compare__growth-num">APS</div>
+            <span class="rating__text">no-profit e inclusiva</span>
+          </div>
+        </div>
+        <h3 class="compare__head">Dentro la Compagnia degli Anelli</h3>
+        <ul class="compare__list compare__list--good">
+          <li><span class="mk mk--v">✓</span> Corsi di <strong>doppiaggio, recitazione, teatro e dizione</strong></li>
+          <li><span class="mk mk--v">✓</span> Una <b class="hl-lime">comunità</b> di persone con la tua stessa passione</li>
+          <li><span class="mk mk--v">✓</span> Un'associazione trasparente, dove i contributi tornano a te</li>
+          <li><span class="mk mk--v">✓</span> Sostegno a chi è in <strong>difficoltà economica o disabilità</strong></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTATTI -->
+<section class="register" id="info">
+  <div class="container">
+    <h2 class="section-title" data-split>Richiedi<br /><span class="accent accent--italic">informazioni</span></h2>
+    <p class="section-sub reveal" data-reveal>Scrivici su WhatsApp: ti raccontiamo i <strong>corsi, i laboratori</strong> e come diventare socio.</p>
+    <div class="register__grid" data-story>
+      <div class="story-rail" aria-hidden="true"><span class="story-rail__track"></span><span class="story-rail__fill"></span><span class="story-rail__dot" style="top:6%"></span><span class="story-rail__dot" style="top:50%"></span><span class="story-rail__dot" style="top:94%"></span></div>
+      <div class="register__info reveal" data-reveal>
+        <h3 class="register__h">Parliamo della tua passione.</h3>
+        <p class="register__lead">Un messaggio e ti rispondiamo con tutte le informazioni.</p>
+        <ul class="register__details">
+          <li><span class="rico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 21s7-6 7-11a7 7 0 1 0-14 0c0 5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span> <span><strong>Sede:</strong> Roma</span></li>
+          <li><span class="rico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></span> <span><strong>Attività:</strong> doppiaggio, recitazione, teatro, dizione</span></li>
+          <li><span class="rico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 4 2 9l10 5 10-5-10-5z"/><path d="M6 11v4c0 1.5 3 3 6 3s6-1.5 6-3v-4"/></svg></span> <span><strong>Natura:</strong> APS no-profit, aperta ai soci</span></li>
+          <li><span class="rico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span> <span><strong>Contatto:</strong> via WhatsApp e social</span></li>
+        </ul>
+        <div class="loc-box">
+          <iframe class="loc-map" title="Roma · La Compagnia degli Anelli APS" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Roma&output=embed"></iframe>
+          <div class="loc-box__meta"><strong>La Compagnia degli Anelli APS</strong><span>Roma</span></div>
+        </div>
+        <p class="register__note">Seguici anche su <a href="https://www.instagram.com/scuola_doppiaggio_anelli" target="_blank" rel="noopener" data-cursor>Instagram</a>, <a href="https://www.tiktok.com/@scuola.doppiaggio.anelli" target="_blank" rel="noopener" data-cursor>TikTok</a> e <a href="https://www.facebook.com/people/La-Compagnia-degli-Anelli-APS/61580713971544/" target="_blank" rel="noopener" data-cursor>Facebook</a>.</p>
+      </div>
+      <div class="register__card contact__card reveal" data-reveal id="form">
+        <span class="contact__badge"><span class="dot" style="background:#25D366;box-shadow:0 0 0 4px rgba(37,211,102,.18)"></span> Ti rispondiamo <em>al più presto</em></span>
+        <h3 class="contact__title">Scrivici su WhatsApp</h3>
+        <p class="contact__lead">Il modo più veloce per avere informazioni sui corsi, sui laboratori e sul tesseramento come socio.</p>
+        <a href="https://api.whatsapp.com/send?phone=393496034131" class="btn btn--wa btn--block btn--wa-lg" target="_blank" rel="noopener" data-cursor>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.9 4.44-9.9 9.9 0 1.75.46 3.45 1.32 4.95L2 22l5.3-1.39c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.9-4.44 9.9-9.9S17.5 2 12.04 2zm5.8 14.06c-.24.68-1.4 1.3-1.94 1.35-.5.05-1.13.07-1.82-.11-.42-.13-.96-.31-1.65-.6-2.9-1.25-4.8-4.17-4.94-4.36-.14-.19-1.18-1.57-1.18-3s.75-2.13 1.02-2.42c.27-.29.58-.36.77-.36l.55.01c.18.01.42-.07.65.5.24.58.82 2 .89 2.14.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.17-.29.37-.42.5-.14.14-.28.29-.12.57.16.29.72 1.19 1.55 1.92 1.06.95 1.96 1.24 2.24 1.38.28.14.44.12.6-.07.16-.19.69-.81.87-1.09.18-.28.36-.23.6-.14.24.09 1.55.73 1.82.86.27.14.45.21.51.32.07.12.07.66-.17 1.34z"/></svg>
+          Richiedi informazioni <span class="btn__chev">›</span></a>
+        <p class="contact__or">oppure seguici sui social</p>
+        <div class="contact__socials">
+          <a href="https://www.instagram.com/scuola_doppiaggio_anelli" class="contact__social" aria-label="Instagram" target="_blank" rel="noopener" data-cursor><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+          <a href="https://www.tiktok.com/@scuola.doppiaggio.anelli" class="contact__social" aria-label="TikTok" target="_blank" rel="noopener" data-cursor><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 3c.3 2 1.6 3.6 3.5 3.9v2.6c-1.3.1-2.5-.3-3.6-1v6.3a5.8 5.8 0 1 1-5.8-5.8c.3 0 .6 0 .9.1v2.7a3.1 3.1 0 1 0 2.2 3V3h2.8z"/></svg></a>
+          <a href="https://www.facebook.com/people/La-Compagnia-degli-Anelli-APS/61580713971544/" class="contact__social" aria-label="Facebook" target="_blank" rel="noopener" data-cursor><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M14 8h2V5h-2a3 3 0 0 0-3 3v2H9v3h2v6h3v-6h2l1-3h-3V8a1 1 0 0 1 1-1z"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="container">
+    <h2 class="section-title" data-split>Domande<br /><span class="accent accent--italic">frequenti</span></h2>
+    <div class="accordion accordion--faq" data-accordion>
+      <div class="acc-item"><button class="acc-trigger" data-cursor><span class="acc-q">Serve esperienza per iscriversi ai corsi?</span><span class="acc-chev" aria-hidden="true">⌄</span></button><div class="acc-panel"><p>No. I nostri corsi partono dalle basi e accompagnano chiunque, anche chi non ha mai fatto doppiaggio o recitazione. Serve solo la voglia di mettersi in gioco.</p></div></div>
+      <div class="acc-item"><button class="acc-trigger" data-cursor><span class="acc-q">Come divento socio?</span><span class="acc-chev" aria-hidden="true">⌄</span></button><div class="acc-panel"><p>Semplicissimo: scrivici su WhatsApp e ti spieghiamo come tesserarti ed entrare nella Compagnia degli Anelli.</p></div></div>
+      <div class="acc-item"><button class="acc-trigger" data-cursor><span class="acc-q">Quali corsi e attività offrite?</span><span class="acc-chev" aria-hidden="true">⌄</span></button><div class="acc-panel"><p>Corsi e laboratori di doppiaggio, recitazione, teatro e dizione, oltre a iniziative culturali ed eventi aperti ai soci. Al termine del corso di doppiaggio ti portiamo in sala per un provino con direttori e maestri veri.</p></div></div>
+      <div class="acc-item"><button class="acc-trigger" data-cursor><span class="acc-q">Dove si svolgono le lezioni?</span><span class="acc-chev" aria-hidden="true">⌄</span></button><div class="acc-panel"><p>Abbiamo sede a Roma. Scrivici su WhatsApp per conoscere luoghi, orari e calendario dei corsi.</p></div></div>
+      <div class="acc-item"><button class="acc-trigger" data-cursor><span class="acc-q">Cosa significa che siete un'APS?</span><span class="acc-chev" aria-hidden="true">⌄</span></button><div class="acc-panel"><p>Siamo un'Associazione di Promozione Sociale: non abbiamo scopo di lucro. Non vendiamo un servizio, costruiamo una comunità e reinvestiamo tutto in attività culturali e impegno sociale.</p></div></div>
+      <div class="acc-item"><button class="acc-trigger" data-cursor><span class="acc-q">Ci sono agevolazioni per chi è in difficoltà economica o disabilità?</span><span class="acc-chev" aria-hidden="true">⌄</span></button><div class="acc-panel"><p>Sì. Parte della nostra missione è sostenere chi desidera avvicinarsi a queste arti pur trovandosi in difficoltà economica o in condizione di disabilità. Contattaci e ne parliamo.</p></div></div>
+      <div class="acc-item"><button class="acc-trigger" data-cursor><span class="acc-q">Dove trovo statuto, bilanci e atti dell'associazione?</span><span class="acc-chev" aria-hidden="true">⌄</span></button><div class="acc-panel"><p>Nella sezione <a href="#trasparenza" data-cursor>Trasparenza</a>: mettiamo a disposizione di tutti gli atti e i documenti dell'APS, liberamente consultabili.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINALE -->
+<section class="finalcta">
+  <video class="finalcta__bg" autoplay muted loop playsinline preload="auto" id="finalVideo"><source src="hero.mp4" type="video/mp4"></video>
+  <div class="finalcta__overlay" aria-hidden="true"></div>
+  <div class="container finalcta__inner">
+    <div class="rating reveal" data-reveal>
+      <span class="avatars" aria-hidden="true">
+        <span class="g-av" style="--c:#4285F4">GR</span><span class="g-av" style="--c:#DB4437">MD</span><span class="g-av" style="--c:#0F9D58">EB</span><span class="g-av" style="--c:#AB47BC">DR</span><span class="g-av" style="--c:#FF7043">SC</span>
+      </span>
+      <span class="rating__col"><span class="rating__stars rating__stars--google" aria-hidden="true">★★★★★</span><span class="rating__text">Una comunità che dà voce alla passione</span></span>
+    </div>
+    <h2 class="finalcta__title" data-split>Dai voce alla tua passione.<br /><span class="muted-italic">Unisciti alla Compagnia.</span></h2>
+    <p class="finalcta__sub reveal" data-reveal>Associati ora o richiedi informazioni sui corsi di doppiaggio, recitazione, teatro e dizione.</p>
+    <div class="finalcta__actions reveal" data-reveal>
+      <a href="https://api.whatsapp.com/send?phone=393496034131" class="btn btn--wa" target="_blank" rel="noopener" data-cursor>
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.9 4.44-9.9 9.9 0 1.75.46 3.45 1.32 4.95L2 22l5.3-1.39c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.9-4.44 9.9-9.9S17.5 2 12.04 2zm5.8 14.06c-.24.68-1.4 1.3-1.94 1.35-.5.05-1.13.07-1.82-.11-.42-.13-.96-.31-1.65-.6-2.9-1.25-4.8-4.17-4.94-4.36-.14-.19-1.18-1.57-1.18-3s.75-2.13 1.02-2.42c.27-.29.58-.36.77-.36l.55.01c.18.01.42-.07.65.5.24.58.82 2 .89 2.14.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.17-.29.37-.42.5-.14.14-.28.29-.12.57.16.29.72 1.19 1.55 1.92 1.06.95 1.96 1.24 2.24 1.38.28.14.44.12.6-.07.16-.19.69-.81.87-1.09.18-.28.36-.23.6-.14.24.09 1.55.73 1.82.86.27.14.45.21.51.32.07.12.07.66-.17 1.34z"/></svg>
+        Associati ora <span class="btn__chev">›</span></a>
+      <a href="https://api.whatsapp.com/send?phone=393496034131" class="btn btn--ghost" target="_blank" rel="noopener" data-cursor>Richiedi informazioni <span class="btn__chev">›</span></a>
+    </div>
+    <span class="finalcta__note reveal" data-reveal><span class="dot"></span> APS · Roma · doppiaggio, recitazione, teatro e dizione</span>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__top">
+      <a href="#hero" class="nav__logo" data-cursor>
+        <img src="logo.png" alt="La Compagnia degli Anelli" class="nav__logo-mark" />
+        <span class="nav__logo-text"><b>La Compagnia degli Anelli</b><small>APS · Roma</small></span>
+      </a>
+      <nav class="footer__links" aria-label="Footer">
+        <a href="#chisiamo" data-cursor>Chi siamo</a><a href="#corsi" data-cursor>Corsi</a><a href="#trasparenza" data-cursor>Trasparenza</a><a href="#form" data-cursor>Contatti</a>
+      </nav>
+      <div class="footer__social">
+        <a href="https://www.instagram.com/scuola_doppiaggio_anelli" class="social" aria-label="Instagram" target="_blank" rel="noopener" data-cursor><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+        <a href="https://www.tiktok.com/@scuola.doppiaggio.anelli" class="social" aria-label="TikTok" target="_blank" rel="noopener" data-cursor><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 3c.3 2 1.6 3.6 3.5 3.9v2.6c-1.3.1-2.5-.3-3.6-1v6.3a5.8 5.8 0 1 1-5.8-5.8c.3 0 .6 0 .9.1v2.7a3.1 3.1 0 1 0 2.2 3V3h2.8z"/></svg></a>
+        <a href="https://www.facebook.com/people/La-Compagnia-degli-Anelli-APS/61580713971544/" class="social" aria-label="Facebook" target="_blank" rel="noopener" data-cursor><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M14 8h2V5h-2a3 3 0 0 0-3 3v2H9v3h2v6h3v-6h2l1-3h-3V8a1 1 0 0 1 1-1z"/></svg></a>
+      </div>
+    </div>
+    <hr class="pricing__hr" />
+    <div class="footer__legal">
+      <div class="footer__legal-block">
+        <span class="footer__legal-h">L'associazione</span>
+        <p><strong>La Compagnia degli Anelli APS</strong></p>
+        <p>Associazione di Promozione Sociale<br />Ente del Terzo Settore</p>
+        <p><strong>Sede legale:</strong><br />Via Raiano 23, 00132 Roma (RM)</p>
+      </div>
+      <div class="footer__legal-block">
+        <span class="footer__legal-h">Consiglio Direttivo</span>
+        <p><strong>Presidente:</strong><br />Davide Di Giacomi Esposto</p>
+        <p><strong>Vice Presidente:</strong><br />Diego Andrea Giuliani</p>
+        <p><strong>Segretario e Tesoriere:</strong><br />Marco Marrazzo</p>
+      </div>
+      <div class="footer__legal-block">
+        <span class="footer__legal-h">Dati fiscali</span>
+        <p><strong>Codice Fiscale:</strong><br />96518590581</p>
+        <p><strong>Partita IVA:</strong><br />16719851004</p>
+        <p><strong>Iscrizione RUNTS:</strong><br />det. G03928 del 23/03/2023</p>
+      </div>
+      <div class="footer__legal-block">
+        <span class="footer__legal-h">Contatti &amp; documenti</span>
+        <p><strong>Email:</strong><br /><a href="mailto:lacompagniadeglianelli@outlook.it" data-cursor>lacompagniadeglianelli@outlook.it</a></p>
+        <p><strong>Tel. / WhatsApp:</strong><br /><a href="https://api.whatsapp.com/send?phone=393496034131" target="_blank" rel="noopener" data-cursor>+39 349 603 4131</a></p>
+        <p><a href="https://drive.google.com/drive/folders/1-U8OkkRwjO1s0Zag172LppEENqMxICPA?usp=sharing" target="_blank" rel="noopener" data-cursor>Atti e documenti (trasparenza) ›</a></p>
+      </div>
+    </div>
+    <div class="footer__5x1000">
+      <div class="footer__5x1000-txt">
+        <span class="footer__legal-h">Sostienici · 5×1000</span>
+        <p>Non ti costa nulla: nella dichiarazione dei redditi dona il tuo <strong>5×1000</strong> alla Compagnia degli Anelli indicando il nostro Codice Fiscale.</p>
+      </div>
+      <span class="footer__cf">96518590581</span>
+    </div>
+    <hr class="pricing__hr" />
+    <div class="footer__bottom">
+      <span class="footer__made">La Compagnia degli Anelli APS · Via Raiano 23, 00132 Roma (RM) · C.F. 96518590581 · P.IVA 16719851004 · RUNTS det. G03928 del 23/03/2023</span>
+      <div class="footer__copy"><span>© 2026 La Compagnia degli Anelli APS. Tutti i diritti riservati.</span><button class="to-top" id="toTop" aria-label="Torna su" data-cursor>↑</button></div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/split-type@0.3.4/umd/index.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
