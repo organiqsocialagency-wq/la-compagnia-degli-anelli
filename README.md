@@ -1,28 +1,23 @@
-# La Compagnia degli Anelli APS — Landing page
+# La Compagnia degli Anelli APS
 
-Sito statico della **Compagnia degli Anelli APS**, Associazione di Promozione Sociale con sede a Roma:
-scuola di **doppiaggio, recitazione, teatro e dizione**.
+Landing page statica originale per la Compagnia degli Anelli APS. Questa versione sostituisce integralmente la precedente interfaccia e il relativo HTML/CSS/JS, mantenendo contenuti e asset dell'associazione.
 
-## Contenuto
+## Anteprima
 
-Sito statico (nessuna build necessaria):
+Dalla cartella del progetto:
 
-- `index.html` — la pagina
-- `styles.css` — stile (palette brand: Blu scena, Beige sipario, Avorio)
-- `app.js` — animazioni (GSAP, Lenis, ScrollTrigger via CDN)
-- `logo.png` — logo dell'associazione
-- `vsl.mp4` + `vsl-poster.jpg` — video VSL nella hero
-- `hero.mp4` + `testimonianze-poster.jpg` — video testimonianze (sezione "Guarda chi siamo")
+```sh
+python3 -m http.server 8765
+```
 
-## Pubblicazione
+Apri http://localhost:8765. La branch `main` continua a servire il sito pubblico tramite GitHub Pages; questa branch contiene la proposta di redesign.
 
-È un sito puramente statico: si pubblica servendo la cartella così com'è.
+## File
 
-- **GitHub Pages**: attivo sul branch `main` (root).
-- **Vercel**: "Import Project" dal repo, nessuna configurazione necessaria.
+- `index.html`, `styles.css`, `app.js`: pagina e interazioni senza dipendenze JavaScript esterne.
+- `vsl.mp4`, `vsl-poster.jpg`: VSL nella hero.
+- `hero.mp4`, `voices-poster.jpg`: video della Compagnia nella sezione «Le voci».
+- `portrait-studio.webp`, `microphone-studio.webp`: foto originali del progetto ottimizzate per il web.
+- `logo-navy.png`, `logo.png`: marchio sui fondi chiaro e scuro.
 
-## Contatti
-
-- Sede legale: Via Raiano 23, 00132 Roma (RM)
-- C.F. 96518590581 · P.IVA 16719851004 · RUNTS det. G03928 del 23/03/2023
-- WhatsApp: +39 349 603 4131
+Le recensioni testuali inventate presenti nella prima versione sono state rimosse. Inserire solo testimonianze autentiche e autorizzate.
