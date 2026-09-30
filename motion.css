@@ -1,0 +1,67 @@
+/* Motion is opt-in: content stays visible without JavaScript or with reduced motion. */
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes arrive {
+    from { opacity: 0; transform: translate3d(0, 16px, 0); }
+    to { opacity: 1; transform: translate3d(0, 0, 0); }
+  }
+
+  html.has-motion .hero-heading {
+    animation: arrive .7s cubic-bezier(.22, 1, .36, 1) both;
+  }
+
+  html.has-motion .hero-support {
+    animation: arrive .7s cubic-bezier(.22, 1, .36, 1) .12s both;
+  }
+
+  html.has-motion .hero-film {
+    animation: arrive .82s cubic-bezier(.22, 1, .36, 1) .2s both;
+  }
+
+  html.has-motion .reveal-word {
+    display: inline-block;
+    opacity: 0;
+    transform: translate3d(0, .3em, 0);
+    transition:
+      opacity .55s ease,
+      transform .68s cubic-bezier(.22, 1, .36, 1);
+    transition-delay: calc(var(--word-order, 0) * 48ms);
+  }
+
+  html.has-motion .word-reveal.is-visible .reveal-word {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+
+  html.has-motion .soft-enter {
+    opacity: 0;
+    transform: translate3d(0, 18px, 0);
+    transition:
+      opacity .68s ease,
+      transform .78s cubic-bezier(.22, 1, .36, 1);
+    transition-delay: var(--enter-delay, 0ms);
+  }
+
+  html.has-motion .soft-enter.is-visible {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+
+  html.has-motion .audition-image.soft-enter img,
+  html.has-motion .about-photo.soft-enter img {
+    transform: scale(1.035);
+    transition: transform 1s cubic-bezier(.22, 1, .36, 1);
+  }
+
+  html.has-motion .audition-image.soft-enter.is-visible img,
+  html.has-motion .about-photo.soft-enter.is-visible img {
+    transform: scale(1);
+  }
+}
+
+@media print {
+  html.has-motion .reveal-word,
+  html.has-motion .soft-enter {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

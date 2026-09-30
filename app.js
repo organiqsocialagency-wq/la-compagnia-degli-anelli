@@ -90,3 +90,64 @@ copyButton.addEventListener('click', async () => {
     copyStatus.textContent = 'Seleziona e copia: 96518590581';
   }
 });
+
+// Reveal selected headings word by word as they enter view. Original text stays
+// available to assistive technology and is visible when motion is unavailable.
+if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  const revealTargets = [];
+
+  document.querySelectorAll('[data-word-reveal]').forEach(heading => {
+    const accessibleText = heading.innerText.replace(/\s+/g, ' ').trim();
+    const walker = document.createTreeWalker(heading, NodeFilter.SHOW_TEXT);
+    const textNodes = [];
+    while (walker.nextNode()) textNodes.push(walker.currentNode);
+
+    let wordOrder = 0;
+    textNodes.forEach(node => {
+      const fragment = document.createDocumentFragment();
+      (node.textContent.match(/\s+|\S+/g) || []).forEach(token => {
+        if (/^\s+$/.test(token)) {
+          fragment.append(document.createTextNode(token));
+          return;
+        }
+        const word = document.createElement('span');
+        word.className = 'reveal-word';
+        word.textContent = token;
+        word.setAttribute('aria-hidden', 'true');
+        word.style.setProperty('--word-order', wordOrder++);
+        fragment.append(word);
+      });
+      node.replaceWith(fragment);
+    });
+
+    heading.setAttribute('aria-label', accessibleText);
+    heading.classList.add('word-reveal');
+    revealTargets.push(heading);
+  });
+
+  const enterGroups = [
+    ['.benefit-grid > article', 95],
+    ['.course-grid > article', 80],
+    ['.journey li', 85],
+    ['.audition-image, .voices-media, .about-photo, .document-card', 0],
+    ['.interlude p, .voices-note, .about-statement, .five-code', 0]
+  ];
+  enterGroups.forEach(([selector, step]) => {
+    document.querySelectorAll(selector).forEach((element, index) => {
+      element.classList.add('soft-enter');
+      element.style.setProperty('--enter-delay', `${index * step}ms`);
+      revealTargets.push(element);
+    });
+  });
+
+  const revealObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('is-visible');
+      revealObserver.unobserve(entry.target);
+    });
+  }, { threshold: .08, rootMargin: '0px 0px -8% 0px' });
+
+  document.documentElement.classList.add('has-motion');
+  revealTargets.forEach(element => revealObserver.observe(element));
+}
