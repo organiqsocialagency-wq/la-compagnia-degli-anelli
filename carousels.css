@@ -1,0 +1,93 @@
+/* Card drags may cross the viewport edge; clip only that horizontal paint. */
+.studio-proposal main{overflow-x:clip}
+/* Progressive enhancement: without JS these galleries remain horizontally scrollable. */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.stack-carousel{--card-width:340px;--card-ratio:1.333333;position:relative;min-width:0}
+.carousel-stage{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;outline-offset:8px;border-radius:24px}
+.stack-card{flex:0 0 78%;position:relative;overflow:hidden;border:6px solid #fffdfa;border-radius:25px;background:var(--navy);scroll-snap-align:center;isolation:isolate;box-shadow:0 18px 38px #0f1f3320}
+.stack-card img{width:100%;height:100%;aspect-ratio:3/4;object-fit:cover;user-select:none;-webkit-user-drag:none;pointer-events:none}
+.stack-card figcaption{position:absolute;z-index:2;bottom:24px;left:24px;right:20px;color:white;pointer-events:none}
+.stack-card figcaption>span{font-size:9px;letter-spacing:.13em;color:#e2cbaa}
+.stack-card figcaption strong{display:block;font-size:28px;line-height:1.1;letter-spacing:-.035em;font-weight:600;margin-top:8px}
+.stack-card figcaption p{font-size:12px;line-height:1.4;margin-top:7px;color:#e5e9ed}
+.teacher-carousel .stack-card::after{content:'';position:absolute;z-index:1;inset:40% 0 0;pointer-events:none;background:linear-gradient(transparent,#091522e6 93%)}
+.portrait-fandom img{object-position:50% 26%}.portrait-mubi img{object-position:50% 25%}.portrait-bucky img{object-position:51% 25%}.portrait-hector img{object-position:34% 50%}.portrait-haku img{object-position:55% 50%}
+.carousel-controls{display:none;align-items:center;justify-content:center;gap:18px;position:relative;z-index:5;margin-top:18px}
+.carousel-arrow{display:grid;place-items:center;width:44px;height:44px;flex:0 0 44px;border:1px solid #cfc6b8;border-radius:50%;background:transparent;color:var(--navy);transition:background .2s,border-color .2s}
+.carousel-arrow:hover{background:#e9e0d4;border-color:#b4a185}
+.carousel-count{font-size:11px;font-variant-numeric:tabular-nums;letter-spacing:.07em;color:#796950;white-space:nowrap}
+.swipe-hint{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px;max-width:215px;font-size:12px;color:#746148;line-height:1.4}
+.swipe-hint .carousel-count{display:block;width:100%;text-align:center;font-size:10px;margin-top:2px}
+.swipe-glyph{width:29px;height:23px;flex-shrink:0}
+.is-explored .swipe-glyph{animation:none!important}
+.stack-carousel.is-ready .carousel-stage{display:block;position:relative;overflow:visible;scroll-snap-type:none;height:calc(var(--card-width) * var(--card-ratio) + 34px);touch-action:pan-y;cursor:grab;user-select:none}
+.stack-carousel.is-ready .stack-card{position:absolute;top:16px;left:50%;width:var(--card-width);height:calc(var(--card-width) * var(--card-ratio));margin:0;opacity:0;transform:translate(-50%,20px) scale(.8);transition:transform .65s cubic-bezier(.22,1,.36,1),opacity .4s ease,filter .65s ease;z-index:0;pointer-events:none;filter:brightness(.8)}
+.stack-carousel.is-ready .stack-card[data-position="left"]{z-index:1;opacity:1;transform:translate(-74%,13px) rotate(-9deg) scale(.88)}
+.stack-carousel.is-ready .stack-card[data-position="right"]{z-index:2;opacity:1;transform:translate(-26%,13px) rotate(9deg) scale(.88)}
+.stack-carousel.is-ready .stack-card[data-position="front"]{z-index:3;opacity:1;pointer-events:auto;filter:none;transform:translate(calc(-50% + var(--drag-x,0px)),0) rotate(var(--drag-angle,0deg))}
+.stack-carousel.is-ready .carousel-controls{display:flex}
+.stack-carousel.is-dragging .carousel-stage,.stack-carousel.is-dragging a{cursor:grabbing}
+.stack-carousel.is-dragging .stack-card[data-position="front"]{transition:none}
+.stack-carousel a:focus-visible{outline:3px solid var(--gold);outline-offset:-6px;border-radius:18px}
+.teacher-visual{padding:4px 0;position:relative;min-width:0}
+.teacher-profile{grid-template-columns:1fr 1fr;gap:90px;padding:12px 30px 0 12px}
+.teacher-copy .teacher-socials{margin-top:25px;padding-top:22px;border-top:1px solid #dad3c8}
+.teacher-socials>span{display:block;font-size:10px;color:var(--gold-dark);letter-spacing:.11em;font-weight:600}
+.teacher-socials>div{display:flex;gap:24px;margin-top:8px}
+.teacher-socials a{display:inline-flex;align-items:center;gap:8px;min-height:44px;font-size:13px;font-weight:600}
+.teacher-socials a:hover{color:var(--gold-dark)}
+.teachers>.cast-credits{margin-top:28px;margin-left:12px}
+.social-stories{padding-bottom:15px}
+.social-layout{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;padding-inline:32px 12px}
+.social-copy h2{font-size:clamp(48px,5vw,65px)}
+.social-copy .lead{font-size:21px;line-height:1.4;letter-spacing:-.02em;margin-top:26px}
+.social-copy>p:not(.lead){font-size:16px;line-height:1.65;color:#69717b;max-width:370px;margin-top:18px}
+.social-links{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.social-links .btn{gap:10px;justify-content:center;min-width:140px;font-size:14px}
+.btn-outline{border:1px solid #b7ad9f;color:var(--navy);background:transparent}
+.btn-outline:hover{background:#e9e0d4}
+.social-handle{display:block;font-size:12px;color:#796950;letter-spacing:.015em;margin-top:18px}
+.reels-carousel{--card-width:280px;--card-ratio:1.777778}
+.reels-carousel::before{content:'';position:absolute;width:92%;height:80%;left:4%;top:7%;background:radial-gradient(ellipse,#ddc3a077,transparent 68%);z-index:-1;pointer-events:none}
+.reel-card{border-width:5px;border-color:#fffdfa;border-radius:25px;background:#091522}
+.reel-card>a{display:block;width:100%;height:100%;color:white;-webkit-user-drag:none}
+.reel-card>a::after{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(#09152255,transparent 23%,transparent 56%,#091522ed)}
+.reel-card img{aspect-ratio:9/16;object-fit:cover}
+.reel-platform{display:flex;align-items:center;gap:7px;position:absolute;z-index:1;top:16px;left:16px;background:#0915227a;backdrop-filter:blur(9px);border:1px solid #ffffff30;padding:7px 10px;border-radius:100px;font-size:10px;font-weight:600}
+.reel-platform .ui-icon{width:15px;height:15px}
+.reel-caption{position:absolute;z-index:1;left:20px;right:20px;bottom:22px}
+.reel-caption>strong{font-size:25px;line-height:1.1;letter-spacing:-.035em;font-weight:600;display:block;max-width:210px}
+.reel-open{display:flex;align-items:center;gap:7px;font-size:11px;margin-top:15px;color:#e6d1b4}
+.reel-open svg{width:16px;height:16px}
+.reels-carousel .carousel-controls{gap:16px;margin-top:18px}
+.carousel-toggle{display:flex;align-items:center;justify-content:center;gap:7px;border:0;border-radius:100px;background:#eee6da;color:#6d583d;padding:8px 12px;min-height:40px;font-size:11px}
+.pause-mark{width:10px;height:11px;border-inline:3px solid currentColor}
+.carousel-toggle[aria-pressed="true"] .pause-mark{width:10px;height:11px;border:0;background:currentColor;clip-path:polygon(10% 0,100% 50%,10% 100%)}
+@media(prefers-reduced-motion:no-preference){
+ @keyframes swipe-cue{0%,20%,100%{transform:translateX(0) rotate(0)}40%{transform:translateX(-5px) rotate(-8deg)}65%{transform:translateX(5px) rotate(8deg)}}
+ .teacher-carousel.is-inview:not(.is-explored) .swipe-glyph{animation:swipe-cue 2s ease-in-out 3}
+}
+@media(max-width:1100px){
+ .teacher-profile{gap:45px;padding-inline:0}.teacher-carousel{--card-width:clamp(210px,27vw,300px)}
+ .social-layout{gap:40px;padding-inline:0}.reels-carousel{--card-width:clamp(210px,26vw,280px)}
+ .social-copy h2{font-size:49px}.social-links{gap:8px}.social-links .btn{min-width:125px}
+ .stack-card figcaption{left:18px;right:14px;bottom:21px}.stack-card figcaption strong{font-size:25px}.stack-card figcaption p{font-size:11px}
+ .swipe-hint{font-size:11px;gap:5px}.carousel-controls{gap:10px}.swipe-glyph{width:25px}
+}
+@media(max-width:700px){
+ .teacher-profile{grid-template-columns:1fr;gap:32px;padding:0 9px}.teacher-visual{width:100%;max-width:460px;padding:0;justify-self:center}
+ .teacher-carousel{--card-width:clamp(200px,64vw,300px)}.stack-card{border-width:5px;border-radius:21px}
+ .carousel-controls{gap:17px;margin-top:17px}.swipe-hint{font-size:11px;max-width:185px}
+ .teacher-copy .teacher-socials{margin-top:22px;padding-top:18px}.teacher-socials>div{gap:28px}
+ .teachers>.cast-credits{margin-left:9px;margin-top:24px}
+ .social-stories{padding-bottom:0}.social-layout{grid-template-columns:1fr;gap:32px;padding-inline:9px}
+ .social-copy h2{font-size:48px}.social-copy .lead{font-size:21px}.social-copy>p:not(.lead){font-size:15px}
+ .social-copy .kicker{font-size:9px}.social-links .btn{min-width:132px}
+ .reels-carousel{--card-width:clamp(190px,60vw,280px);max-width:460px;width:100%;justify-self:center;margin-top:5px}
+ .reel-caption{left:17px;right:15px;bottom:20px}.reel-caption>strong{font-size:24px}.reel-platform{left:12px;top:13px;font-size:9px}
+ .reels-carousel .carousel-controls{margin-top:18px}
+}
+@media(prefers-reduced-motion:reduce){
+ .stack-carousel.is-ready .stack-card,.carousel-arrow{transition:none}.swipe-glyph{animation:none!important}
+}
+@media print{.stack-carousel.is-ready .carousel-stage{height:auto;display:flex;overflow:visible;flex-wrap:wrap}.stack-carousel.is-ready .stack-card{position:relative;inset:auto;transform:none!important;opacity:1;filter:none;flex:0 0 30%;height:auto}.carousel-controls{display:none!important}}

@@ -120,7 +120,9 @@
         ['.hero-support', 0],
         ['.benefit-grid > article', 80],
         ['.course-grid > article', 75],
-        ['.journey li', 80],
+        ['.journey li, .selection-steps li', 80],
+        ['.character-grid > figure', 65],
+        ['.teacher-portrait', 0],
         ['.audition-image, .about-photo, .voices-media', 0],
         ['.interlude p, .voices-note, .community-band', 0]
       ];
