@@ -1,28 +1,31 @@
-# La Compagnia degli Anelli APS — Landing page
+# La Compagnia degli Anelli APS
 
-Sito statico della **Compagnia degli Anelli APS**, Associazione di Promozione Sociale con sede a Roma:
-scuola di **doppiaggio, recitazione, teatro e dizione**.
+Landing ufficiale: https://organiqsocialagency-wq.github.io/la-compagnia-degli-anelli/
 
-## Contenuto
+La versione Studio è la landing principale dal 6 ottobre 2026. Le precedenti landing e le proposte A/B sono state rimosse dai file del sito.
 
-Sito statico (nessuna build necessaria):
+## Contenuti
 
-- `index.html` — la pagina
-- `styles.css` — stile (palette brand: Blu scena, Beige sipario, Avorio)
-- `app.js` — animazioni (GSAP, Lenis, ScrollTrigger via CDN)
-- `logo.png` — logo dell'associazione
-- `vsl.mp4` + `vsl-poster.jpg` — video VSL nella hero
-- `hero.mp4` + `testimonianze-poster.jpg` — video testimonianze (sezione "Guarda chi siamo")
+- VSL orizzontale ampia in hero, autoplay senza audio con controllo per attivarlo.
+- Corsi di Doppiaggio, Recitazione, Teatro e Dizione a Roma, riservati ai soci.
+- Emiliano Coltorti con sette schede scorribili: due ritratti, Bucky Barnes, Pennywise, Héctor, Lex Luthor e Haku (edizione italiana 2003).
+- Sezione dedicata ai provini per gli allievi selezionati, senza garanzia di impiego.
+- Video testimonianze e carosello di tre reel, collegati ai contenuti originali.
+- Trasparenza, documenti, 5×1000, dati APS e consiglio direttivo.
+- CTA WhatsApp: +39 349 603 4131.
+
+## File e anteprima
+
+`index.html` è la pagina principale. `studio.css` definisce il design, `carousels.css` e `carousels.js` i caroselli, `app.js` menu e video. `motion.css` e `motion.js` gestiscono le animazioni progressive e rispettano la preferenza di movimento ridotto. Font: Hanken Grotesk e Instrument Serif.
+
+```sh
+python3 -m http.server 8765 --bind 127.0.0.1
+```
+
+Aprire http://127.0.0.1:8765/. Nessuna build o dipendenza JavaScript esterna.
+
+`media/` contiene fotografie e copertine dei reel; provenienza e crediti in `media/SOURCES.md`. La VSL usa `vsl.mp4`; le testimonianze usano `hero.mp4`. I reel integrali si aprono sui social. Le immagini e i personaggi appartengono ai rispettivi titolari. Crediti e licenza delle animazioni adattate da React Bits in `THIRD_PARTY_NOTICES.md`.
 
 ## Pubblicazione
 
-È un sito puramente statico: si pubblica servendo la cartella così com'è.
-
-- **GitHub Pages**: attivo sul branch `main` (root).
-- **Vercel**: "Import Project" dal repo, nessuna configurazione necessaria.
-
-## Contatti
-
-- Sede legale: Via Raiano 23, 00132 Roma (RM)
-- C.F. 96518590581 · P.IVA 16719851004 · RUNTS det. G03928 del 23/03/2023
-- WhatsApp: +39 349 603 4131
+GitHub Pages pubblica la radice del branch `main`. La cartella è utilizzabile anche su Vercel come sito statico, senza comando di build e con directory di pubblicazione `.`.

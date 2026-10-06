@@ -1,0 +1,97 @@
+/* React Bits adaptations. Source credits and license: THIRD_PARTY_NOTICES.md.
+   Content is visible by default; only a successfully initialized script opts in. */
+@media (prefers-reduced-motion: no-preference) {
+  html.has-motion {
+    --motion-ease: cubic-bezier(.22, 1, .36, 1);
+    --scroll-blur: 2px;
+  }
+
+  /* Blur Text: a short, staggered focus pull on the opening headline. */
+  @keyframes focus-word {
+    0% { opacity: 0; filter: blur(8px); transform: translate3d(0, .24em, 0); }
+    55% { opacity: .7; filter: blur(2px); }
+    100% { opacity: 1; filter: blur(0); transform: translate3d(0, 0, 0); }
+  }
+  html.has-motion .blur-word {
+    display: inline-block;
+    animation: focus-word .75s var(--motion-ease) both;
+    animation-delay: calc(var(--word-order) * 65ms);
+  }
+
+  /* Scroll Reveal: each word resolves as the reader moves down the page. */
+  html.has-motion .scrub-word {
+    display: inline-block;
+    opacity: calc(.3 + var(--reveal, 0) * .7);
+    filter: blur(calc((1 - var(--reveal, 0)) * var(--scroll-blur)));
+    transform: translate3d(0, calc((1 - var(--reveal, 0)) * .08em), 0);
+  }
+  html.has-motion .is-settled .scrub-word {
+    opacity: 1;
+    filter: none;
+    transform: none;
+  }
+
+  /* Animated Content: restrained stagger, plus a closer-to-wider photo reveal. */
+  html.has-motion .motion-enter {
+    opacity: 0;
+    transform: translate3d(0, 28px, 0);
+    transition: opacity .65s ease, transform .85s var(--motion-ease);
+    transition-delay: var(--enter-delay, 0ms);
+  }
+  html.has-motion .motion-enter.is-visible {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+  html.has-motion :is(.audition-image, .about-photo).motion-enter {
+    clip-path: inset(7% 0 0 0);
+    transition: opacity .8s ease, transform 1s var(--motion-ease), clip-path 1s var(--motion-ease);
+  }
+  html.has-motion :is(.audition-image, .about-photo).motion-enter img {
+    transform: scale(1.075);
+    transition: transform 1.3s var(--motion-ease);
+  }
+  html.has-motion :is(.audition-image, .about-photo).is-visible { clip-path: inset(0); }
+  html.has-motion :is(.audition-image, .about-photo).is-visible img { transform: scale(1); }
+  html.has-motion .motion-enter:focus-within { opacity: 1; transform: none; transition: none; }
+
+  /* Spotlight Card: warm studio light under the content, never over the links. */
+  html.has-motion .card-spotlight {
+    position: relative;
+    isolation: isolate;
+    --mouse-x: 50%;
+    --mouse-y: 50%;
+  }
+  html.has-motion .card-spotlight::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background: radial-gradient(440px circle at var(--mouse-x) var(--mouse-y), rgba(201, 174, 134, .18), transparent 75%);
+    opacity: 0;
+    transition: opacity .3s ease;
+  }
+  html.has-motion .card-spotlight:is(.spotlight-active, :focus-within)::before { opacity: 1; }
+  html.has-motion .card-spotlight:focus-within { border-color: var(--gold); }
+  html.has-motion .course-card:hover { background: var(--navy-2); }
+  html.has-motion .course-card__bottom a span { transition: transform .25s var(--motion-ease); }
+  html.has-motion .course-card__bottom a:is(:hover, :focus-visible) span { transform: translate(3px, -3px); }
+}
+
+@media (prefers-reduced-motion: no-preference) and (max-width: 700px) {
+  html.has-motion { --scroll-blur: 0px; }
+  html.has-motion .blur-word { animation-duration: .55s; animation-delay: calc(var(--word-order) * 40ms); }
+  html.has-motion .motion-enter { transform: translate3d(0, 16px, 0); transition-delay: 0ms; }
+  html.has-motion .motion-enter.is-visible { transform: none; }
+}
+
+@media print {
+  html.has-motion :is(.blur-word, .scrub-word, .motion-enter) {
+    animation: none !important;
+    opacity: 1 !important;
+    filter: none !important;
+    transform: none !important;
+    clip-path: none !important;
+  }
+  .card-spotlight::before { display: none; }
+}
